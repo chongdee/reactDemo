@@ -1,20 +1,40 @@
-import React from 'react'
-import Child1 from './Child1'
+import React from "react";
+import Child1 from "./Child1";
 import Child2 from "./Child2";
 
 export default class Parent extends React.Component {
   constructor() {
-    super()
-
+    super();
+    this.state = {
+      money: 2,
+    };
   }
 
-  render(){
+  handleChange = (e) => {
+    this.setState({
+      money: e.target.value,
+    });
+  };
+
+  render() {
     return (
       <div>
-        Child1:
-        <Child1 />
-        Child2:
-        <Child2 />
+        <div>
+          父组件：
+          <input
+            type="text"
+            value={this.state.money}
+            onChange={this.handleChange}
+          />
+        </div>
+        <div>
+          人民币:
+          <Child1 money={this.state.money} />
+        </div>
+        <div>
+          美元:
+          <Child2 money={this.state.money} />
+        </div>
       </div>
     );
   }

@@ -9,7 +9,9 @@ import React from "react";
 // import FormDemo from "./FormDemo";
 // import RefsAndDOM from "./RefsAndDOM";
 // import RefsForm from "./RefsForm";
-import Parent from "./StatePromote/Parent";
+// import Parent from "./StatePromote/Parent";
+// import Combination from "./Combination";
+import PropTypes from "./PropTypes ";
 
 // 用类的形式创建组件，Hook形式
 class App extends React.Component {
@@ -43,7 +45,10 @@ class App extends React.Component {
         {/* <LifeCycle title={this.state.title} handleChanges={this.handleTitle} /> */}
         {/* <button onClick={this.handleTitle}>修改title</button> */}
         {/* <SetStateDemo /> */}
-        <Parent />
+        {/* <Combination>
+          <div>组合内容</div>
+        </Combination> */}
+        <PropTypes />
       </div>
     );
   }

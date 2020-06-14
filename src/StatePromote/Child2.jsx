@@ -1,14 +1,34 @@
-import React from 'react'
+import React from "react";
 
 export default class Child2 extends React.Component {
-  constructor() {
-    super()
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 0
+    };
   }
 
-  render(){
-    return(
-      <div>child2</div>
-    )
+  componentDidMount(){
+    this.setState({
+      value: this.props.money * 7
+    })
+  }
+
+  handleChange = (e) => {
+    this.setState({
+      value:e.target.value
+    })
+  };
+
+  render() {
+    return (
+      <div>
+        <input
+          type="text"
+          value={this.props.money*7}
+          onChange={this.handleChange}
+        />
+      </div>
+    );
   }
 }
