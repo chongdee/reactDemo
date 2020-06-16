@@ -11,7 +11,10 @@ import React from "react";
 // import RefsForm from "./RefsForm";
 // import Parent from "./StatePromote/Parent";
 // import Combination from "./Combination";
-import PropTypes from "./PropTypes ";
+// import PropTypes from "./PropTypes ";
+// import Fragment from "./Fragment";
+// import MyContext from "./Context";
+import Parent from "./ErrorBoundary/Parent";
 
 // 用类的形式创建组件，Hook形式
 class App extends React.Component {
@@ -31,8 +34,8 @@ class App extends React.Component {
   render() {
     // 有多行标签时，用()标签可以换行
 
-    const nav1 = ["首页", "视频", "学习"];
-    const nav2 = ["web", "Java", "Node"];
+    // const nav1 = ["首页", "视频", "学习"];
+    // const nav2 = ["web", "Java", "Node"];
     return (
       <div>
         {/*<h1>Hello React Component</h1>
@@ -48,7 +51,10 @@ class App extends React.Component {
         {/* <Combination>
           <div>组合内容</div>
         </Combination> */}
-        <PropTypes />
+        {/* <PropTypes /> */}
+        {/* <Fragment/> */}
+        {/* <MyContext /> */}
+        <Parent/>
       </div>
     );
   }
